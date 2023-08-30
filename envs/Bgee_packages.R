@@ -1,5 +1,5 @@
 if (!require("BiocManager", quietly = TRUE))
     install.packages("BiocManager",repos = "http://cran.us.r-project.org")
-BiocManager::install(version = "3.17")
+BiocManager::install(version = "3.16")
 BiocManager::install("BgeeDB")
 BiocManager::install("BgeeCall")
