@@ -1,0 +1,13 @@
+name : course
+channels :
+    - conda-forge
+    - bioconda
+dependencies :
+    - busco == 5.5.0
+    - mafft == 7.520
+    - matplotlib == 3.7.2
+    - raxml == 8.2.12
+    - r-ape == 5.7
+    - treerecs == 1.2
+    - trimal == 1.4.1
+    - r-base
