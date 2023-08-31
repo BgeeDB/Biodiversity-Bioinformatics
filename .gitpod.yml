@@ -17,18 +17,10 @@ tasks:
       mamba env create -f envs/course.yaml
       Rscript envs/Bgee_packages.R
       mamba clean --all -y
-      wget https://github.com/hahnlab/CAFE5/releases/download/v5.1/CAFE5-5.1.0.tar.gz
-      tar -xf CAFE5-5.1.0.tar.gz
-      rm CAFE5-5.1.0.tar.gz
-      cd CAFE5
-      ./configure
-      make
-      export PATH="/workspace/biodivinfo/envs/CAFE5/bin:$PATH"
     # Activate working environment, add cafe5 to PATH and clean terminal
     command: |
       /workspace/mambaforge/bin/mamba init bash
       source ~/.bashrc
       mamba activate course
-      export PATH="/workspace/biodivinfo/envs/CAFE5/bin:$PATH"
       cd /workspace/biodivinfo/
       reset
