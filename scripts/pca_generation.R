@@ -1,4 +1,4 @@
-
+install.packages("ggfortify", repos = "http://cran.us.r-project.org")
 library(ggfortify)
 
 expression_dataset = read.table("../data/pca_dataset")

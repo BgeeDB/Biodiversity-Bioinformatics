@@ -11,4 +11,3 @@ dependencies :
     - treerecs == 1.2
     - trimal == 1.4.1
     - r-base
-    - ggfortify
