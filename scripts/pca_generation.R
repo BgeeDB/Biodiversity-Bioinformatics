@@ -1,0 +1,12 @@
+
+install.packages("ggfortify", repos = "http://cran.us.r-project.org")
+library(ggfortify)
+
+expression_dataset = read.table("../data/pca_dataset")
+pca_res <- prcomp(expression_dataset[4:length(expression_dataset)], scale. = TRUE)
+jpeg(file="../figures/Species_PCA.jpeg")
+autoplot(pca_res, data = expression_dataset_pca, colour = 'Label')
+dev.off()
+jpeg(file="../figures/Organ_PCA.jpeg")
+autoplot(pca_res, data = test, colour = 'Organ')
+dev.off()
