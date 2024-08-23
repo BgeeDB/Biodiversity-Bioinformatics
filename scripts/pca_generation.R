@@ -1,4 +1,6 @@
-install.packages("ggfortify", repos = "http://cran.us.r-project.org")
+if (!require('ggfortify', quietly = TRUE)) {
+  install.packages("ggfortify", repos = "http://cran.us.r-project.org")
+}
 library(ggfortify)
 
 expression_dataset = read.table(file = gzfile("/workspace/Biodiversity-Bioinformatics/data/pca_dataset.tsv.gz"), header = TRUE, sep = "\t")
