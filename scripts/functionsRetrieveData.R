@@ -180,7 +180,7 @@ loadExpressionKaessmann2019 <- function() {
 }
 
 transfrom_pca <- function(orthologs_one_to_one, processed_expression_data) {
-  kaessmann_remapped <- kaessmann_remapped_dev_stage
+  kaessmann_remapped <- processed_expression_data
   all_exression_transformed <- as.data.frame(matrix(nrow = 0, ncol = nrow(orthologs_one_to_one) + 4))
   for (speciesId in unique(kaessmann_remapped$Species.ID)) {
     for (libraryId in unique(kaessmann_remapped$Library.ID[kaessmann_remapped$Species.ID == speciesId])) {
