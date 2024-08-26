@@ -5,7 +5,15 @@ library(ggfortify)
 
 ####################
 # Read data
-expression_dataset = read.table(file = gzfile("/workspace/Biodiversity-Bioinformatics/data/pca_dataset.tsv.gz"), header = TRUE, sep = "\t")
+pca_file_name <- "/workspace/Biodiversity-Bioinformatics/data/pca_dataset.tsv"
+
+expression_dataset <- NULL
+# Read tsv or tsv.gz file in case the gzipped file has been uncompressed by the student
+if(file.exists(pca_file_name)) {
+  expression_dataset = read.table(file = pca_file_name, header = TRUE, sep = "\t")
+} else {
+  expression_dataset = read.table(file = gzfile(paste0(pca_file_name,".gz")), header = TRUE, sep = "\t")
+}
 # replace type of speciesId from numeric to character
 expression_dataset$speciesId <- as.character(expression_dataset$speciesId)
 
