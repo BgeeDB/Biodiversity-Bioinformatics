@@ -33,7 +33,7 @@ a + scale_color_manual(values = c("black","grey50","orange","forestgreen","red",
 dev.off()
 
 # coloring per organ
-jpeg(file="/workspace/Biodiversity-Bioinformatics/figures/PCA_post-embryonic_ColoredbyOrgan.jpeg.jpeg")
+jpeg(file="/workspace/Biodiversity-Bioinformatics/figures/PCA_post-embryonic_ColoredbyOrgan.jpeg")
 a<-autoplot(pca_nonemb, data = expression_dataset[which(expression_dataset$devStageName=="post-embryonic stage"),], colour = 'anatEntityName')
 a + scale_color_manual(values = c("black","grey50","orange","forestgreen","red","purple","blue")) 
 dev.off()
@@ -41,13 +41,13 @@ dev.off()
 ####################
 # Plot result embryonic stages
 # coloring per species
-jpeg(file="/workspace/Biodiversity-Bioinformatics/figures/PCA_embryonic_ColoredbySpecies.jpeg.jpeg")
+jpeg(file="/workspace/Biodiversity-Bioinformatics/figures/PCA_embryonic_ColoredbySpecies.jpeg")
 a<-autoplot(pca_emb, data = expression_dataset[which(expression_dataset$devStageName=="embryo stage"),], colour = 'speciesId')
 a + scale_color_manual(values = c("black","grey50","orange","forestgreen","red","purple")) 
 dev.off()
 
 # coloring per organ
-jpeg(file="/workspace/Biodiversity-Bioinformatics/figures/PCA_embryonic_ColoredbyOrgan.jpeg.jpeg")
+jpeg(file="/workspace/Biodiversity-Bioinformatics/figures/PCA_embryonic_ColoredbyOrgan.jpeg")
 a<-autoplot(pca_emb, data = expression_dataset[which(expression_dataset$devStageName=="embryo stage"),], colour = 'anatEntityName')
 a + scale_color_manual(values = c("black","grey50","orange","forestgreen","red","purple","blue")) 
 dev.off()
