@@ -71,4 +71,4 @@ results.table.p <-all_res_final[which(all_res_final$weightFisher<=0.001),]
 results.table.bh <- all_res_final[which(all_res_final$p.adj<=0.05),]
 
 #save first top 50 ontolgies sorted by adjusted pvalues
-write.table(all_res_final[1:50,],"summary_topGO_analysis.csv",sep="\t",quote=FALSE,row.names=FALSE)
+write.table(all_res_final[1:50,],"/workspace/Biodiversity-Bioinformatics/data/summary_topGO_analysis.tsv",sep="\t",quote=FALSE,row.names=FALSE)
