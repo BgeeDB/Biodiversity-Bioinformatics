@@ -1,3 +1,5 @@
+if (!require("BiocManager", quietly = TRUE))
+    install.packages("BiocManager", repos = "http://cran.us.r-project.org")
 if (!require("topGO", quietly = TRUE))
     BiocManager::install("topGO")
 if (!require("GO.db", quietly = TRUE))
@@ -71,4 +73,5 @@ results.table.p <-all_res_final[which(all_res_final$weightFisher<=0.001),]
 results.table.bh <- all_res_final[which(all_res_final$p.adj<=0.05),]
 
 #save first top 50 ontolgies sorted by adjusted pvalues
-write.table(all_res_final[1:50,],"/workspace/Biodiversity-Bioinformatics/data/summary_topGO_analysis.tsv",sep="\t",quote=FALSE,row.names=FALSE)
+write.table(x = all_res_final[1:50,], file = "/workspace/Biodiversity-Bioinformatics/data/summary_topGO_analysis.tsv",
+  sep="\t", quote=FALSE, row.names=FALSE)
